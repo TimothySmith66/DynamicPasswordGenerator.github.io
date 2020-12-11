@@ -88,7 +88,7 @@ function generatePassword() {
     } else if (confirmNumber && confirmUppercase) {
         options = numbers.concat(capitalLetters);
     }
-    // 
+    // for one prompt
     else if (confirmCharacter) {
         options = character;
     }
@@ -98,22 +98,22 @@ function generatePassword() {
     else if (confirmLowercase) {
         options = letters;
     }
-    // 
+    // to convert
     else if (confirmUppercase) {
         options = space.concat(capitalLetters);
     };
 
-    // password variable is an array placeholder for user generated amount of length
+    // password zrray of variables 
     var password = [];
 
-    // Start random selection variables:
     // Random selection for all variables: 
     for (var i = 0; i < enter; i++) {
         var pickoptions = options[Math.floor(Math.random() * options.length)];
         password.push(pickoptions);
     }
     // This joins the password array and converts it to a string
-    // Worked with a tutor to incorporate this option
+
+    
     var Ts = password.join("");
     UserInput(Ts);
     return Ts;
